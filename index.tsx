@@ -35,6 +35,7 @@ const TextInputMask = forwardRef<Handles, TextInputMaskProps>(({
     autocomplete= true,
     autoskip = true,
     rightToLeft,
+    TextInputWrapper = TextInput,
     ...rest
 }, ref) => {
   const input = useRef<TextInput>(null)
@@ -78,7 +79,7 @@ const TextInputMask = forwardRef<Handles, TextInputMaskProps>(({
   }))
 
   return (
-      <TextInput
+      <TextInputWrapper
           {...rest}
           ref={input}
           value={maskedValue}
