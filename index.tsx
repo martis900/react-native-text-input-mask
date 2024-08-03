@@ -240,6 +240,7 @@ interface Notation {
 
 export interface TextInputMaskProps extends TextInputProps, MaskOptions{
   mask?: string
+  TextInputWrapper?: React.ComponentType<TextInputProps>;
   onChangeText?: (formatted: string, extracted?: string) => void
 }
 
